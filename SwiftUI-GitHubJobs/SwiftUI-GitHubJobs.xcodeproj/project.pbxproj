@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8860F2412384752700C02365 /* BundleUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8860F2402384752700C02365 /* BundleUtils.swift */; };
+		8860F2422384752700C02365 /* BundleUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8860F2402384752700C02365 /* BundleUtils.swift */; };
+		8860F243238479EB00C02365 /* githubJobs.json in Resources */ = {isa = PBXBuildFile; fileRef = 8886A2BF23833D0900507151 /* githubJobs.json */; };
 		8886A2B82383378600507151 /* SwiftUI_GitHubJobsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8886A2B72383378600507151 /* SwiftUI_GitHubJobsTests.swift */; };
 		8886A2C023833D0900507151 /* githubJobs.json in Resources */ = {isa = PBXBuildFile; fileRef = 8886A2BF23833D0900507151 /* githubJobs.json */; };
 		88AD2D802380429C00FFC11F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD2D7F2380429C00FFC11F /* AppDelegate.swift */; };
@@ -32,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8860F2402384752700C02365 /* BundleUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleUtils.swift; sourceTree = "<group>"; };
 		8886A2B52383378600507151 /* SwiftUI-GitHubJobsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftUI-GitHubJobsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8886A2B72383378600507151 /* SwiftUI_GitHubJobsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_GitHubJobsTests.swift; sourceTree = "<group>"; };
 		8886A2B92383378600507151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 				88AD2D972380434100FFC11F /* SearchJobsViewModel.swift */,
 				88AD2D992380454800FFC11F /* SearchJobRow.swift */,
 				88AD2D9B2380482E00FFC11F /* SearchBar.swift */,
+				8860F2402384752700C02365 /* BundleUtils.swift */,
 				88AD2D93238042BB00FFC11F /* Models.swift */,
 				88AD2D852380429E00FFC11F /* Assets.xcassets */,
 				88AD2D8A2380429E00FFC11F /* LaunchScreen.storyboard */,
@@ -211,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8860F243238479EB00C02365 /* githubJobs.json in Resources */,
 				88AD2D8C2380429E00FFC11F /* LaunchScreen.storyboard in Resources */,
 				88AD2D892380429E00FFC11F /* Preview Assets.xcassets in Resources */,
 				88AD2D862380429E00FFC11F /* Assets.xcassets in Resources */,
@@ -225,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8886A2B82383378600507151 /* SwiftUI_GitHubJobsTests.swift in Sources */,
+				8860F2422384752700C02365 /* BundleUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +246,7 @@
 				88AD2D982380434100FFC11F /* SearchJobsViewModel.swift in Sources */,
 				88AD2D842380429C00FFC11F /* ContentView.swift in Sources */,
 				88AD2D94238042BB00FFC11F /* Models.swift in Sources */,
+				8860F2412384752700C02365 /* BundleUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
