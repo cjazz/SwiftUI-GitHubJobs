@@ -16,9 +16,10 @@ struct JobRow: View {
     HStack {
     
       Text(job.title)
-        .font(Font.system(.caption))
-      Text(job.id)
-        .font(Font.system(.footnote))
+        .font(.callout)
+      
+//      Text(job.id)
+//        .font(Font.system(.footnote))
       
     }.frame(height:44)
   }
