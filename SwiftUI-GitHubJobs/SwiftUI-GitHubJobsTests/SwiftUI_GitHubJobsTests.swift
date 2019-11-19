@@ -10,44 +10,42 @@ import XCTest
 @testable import SwiftUI_GitHubJobs
 
 class SwiftUI_GitHubJobsTests: XCTestCase {
-    var positions: [Position] = []
+  var positions: [Position] = []
   
-    override func setUp() {
-      // load positions from json file
+  override func setUp() {
 
-      positions = Bundle.main.decode([Position].self, from: "githubJobs.json")
-
-    }
-
+    positions = Bundle.main.decode([Position].self, from: "githubJobs.json")
+    
+  }
+  
   func testModelNotEmpty() throws {
     
     if !positions.isEmpty {
-          try positions.forEach {
-            
-            let id = try XCTUnwrap($0.id)
-            XCTAssertFalse(id.isEmpty)
-            
-            let title = try XCTUnwrap($0.title)
-            XCTAssertFalse(title.isEmpty)
-            
-            let type = try XCTUnwrap($0.type)
-            XCTAssertFalse(type.isEmpty)
-            
-            let company = try XCTUnwrap($0.company)
-            XCTAssertFalse(company.isEmpty)
-    
-            let url = try XCTUnwrap($0.url)
-            XCTAssertFalse(url.isEmpty)
-            
-            let location = try XCTUnwrap($0.location)
-            XCTAssertFalse(location.isEmpty)
-          }
+      try positions.forEach {
+        
+        let id = try XCTUnwrap($0.id)
+        XCTAssertFalse(id.isEmpty)
+        
+        let title = try XCTUnwrap($0.title)
+        XCTAssertFalse(title.isEmpty)
+        
+        let type = try XCTUnwrap($0.type)
+        XCTAssertFalse(type.isEmpty)
+        
+        let company = try XCTUnwrap($0.company)
+        XCTAssertFalse(company.isEmpty)
+        
+        let url = try XCTUnwrap($0.url)
+        XCTAssertFalse(url.isEmpty)
+        
+        let location = try XCTUnwrap($0.location)
+        XCTAssertFalse(location.isEmpty)
       }
+    }
   }
   
-    override func tearDown() {
-      positions.removeAll()
-      
-    }
-
+  override func tearDown() {
+    positions.removeAll()
+  }
+  
 }
