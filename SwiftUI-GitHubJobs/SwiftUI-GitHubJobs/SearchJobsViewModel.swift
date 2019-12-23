@@ -14,7 +14,9 @@ final class SearchJobsViewModel: ObservableObject{
 
   @Published var jobName = ""
   @Published private(set) var jobs = [Position]()
-  
+  let gitHubUser = "cjazz"
+  let githubPATToken =  "d421d8f6dc97a8cd17ff578234fcc8c8aa951c31"
+
   private var searchCancellable: Cancellable? {
       didSet { oldValue?.cancel() }
   }
@@ -28,10 +30,13 @@ final class SearchJobsViewModel: ObservableObject{
     guard !jobName.isEmpty else { return jobs = [] }
     
     if let newjobName = jobName.lowercased().convertedToSlug() {
+      
       let url = URL(string: "https://jobs.github.com/positions.json?search=\(newjobName)")!
          
-         let request = URLRequest(url: url)
-         
+        var request = URLRequest(url: url)
+          let tokenString = gitHubUser + ":\(githubPATToken)"
+          request.setValue(tokenString, forHTTPHeaderField: "Authorization")
+      
          searchCancellable = URLSession.shared.dataTaskPublisher(for: request)
            .map { $0.data }
            .decode(type: [Position].self, decoder: JSONDecoder())
