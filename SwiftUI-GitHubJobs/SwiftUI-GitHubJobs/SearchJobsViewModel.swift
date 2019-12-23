@@ -15,7 +15,7 @@ final class SearchJobsViewModel: ObservableObject{
   @Published var jobName = ""
   @Published private(set) var jobs = [Position]()
   let gitHubUser = "cjazz"
-  let githubPATToken =  "d421d8f6dc97a8cd17ff578234fcc8c8aa951c31"
+  let githubPATToken =  "yourGitHubPatToken"
 
   private var searchCancellable: Cancellable? {
       didSet { oldValue?.cancel() }
